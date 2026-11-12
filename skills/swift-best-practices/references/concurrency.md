@@ -208,7 +208,8 @@ the app or UI target, because the SDK already isolates most of it to the main ac
 
 ```text
 1. Build with the new compiler in Swift 5 mode.
-2. Turn on NonisolatedNonsendingByDefault and InferIsolatedConformances.
+2. Turn on NonisolatedNonsendingByDefault and InferIsolatedConformances,
+   or ApproachableConcurrency with Swift 6.4 tools, which includes both.
    For an app or UI target, also set the default isolation to MainActor.
 3. Turn on complete concurrency checking, which reports Swift 6 errors as warnings.
 4. Fix the warnings, and start with the fixes that clear the most lines:

@@ -122,12 +122,14 @@ The skill has a mapping table for each source language. Some rows are below.
 
 `lints/` holds the compiler settings and the `swift format` rules that report the rules
 a tool can check. Copy the `settings` array from `lints/Package.swift` into your own
-`Package.swift`, and copy `lints/.swift-format` to the root of your project.
+`Package.swift`, and copy `lints/.swift-format` to the root of your project. The
+`swift-review` skill ships the same file as `assets/swift-format.json`, so an installed
+skill always has it.
 
 ```text
 lints/
 ├── Package.swift     # upcoming features, strict memory safety, default isolation
-├── .swift-format     # force unwrap, try!, missing docs, forEach, early exits
+├── .swift-format     # a link to skills/swift-review/assets/swift-format.json
 └── check/            # one Swift file for each rule, written to trigger its warning
 ```
 
@@ -175,3 +177,7 @@ the [Swift 6 migration guide](https://www.swift.org/migration/), the
 [Swift Testing documentation](https://developer.apple.com/documentation/testing), and the
 [Google Swift Style Guide](https://google.github.io/swift/). The layout of the skills and
 the evals follows BeautifulRust.
+
+## License
+
+The repository is under the MIT license, which is in `LICENSE`.

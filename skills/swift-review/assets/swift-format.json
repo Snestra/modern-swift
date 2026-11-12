@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "indentation": { "spaces": 2 },
+  "lineLength": 100,
+  "rules": {
+    "AllPublicDeclarationsHaveDocumentation": true,
+    "AvoidRetroactiveConformances": true,
+    "BeginDocumentationCommentWithOneLineSummary": true,
+    "NeverForceUnwrap": true,
+    "NeverUseForceTry": true,
+    "NeverUseImplicitlyUnwrappedOptionals": true,
+    "OmitExplicitReturns": true,
+    "ReplaceForEachWithForLoop": true,
+    "UseEarlyExits": true,
+    "ValidateDocumentationComments": true
+  }
+}

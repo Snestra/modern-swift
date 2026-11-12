@@ -50,7 +50,9 @@ Fix a warning. Don't silence it with `@unchecked Sendable`, `nonisolated(unsafe)
 has no `Package.swift`.
 
 A target needs the settings below before the concurrency rules in section 5 are true.
-Xcode calls the two upcoming features "Approachable Concurrency".
+Xcode calls the two upcoming features "Approachable Concurrency". With Swift 6.4 tools,
+`.enableUpcomingFeature("ApproachableConcurrency")` turns on both, and
+`swift package init` writes it for you.
 
 ```swift
 // swift-tools-version: 6.2
@@ -64,8 +66,9 @@ let settings: [SwiftSetting] = [
 // Pass `swiftSettings: settings` to each target, and set `swiftLanguageModes: [.v6]`.
 ```
 
-If a project has no `.swift-format` file, suggest `lints/.swift-format` and the settings
-in `lints/Package.swift` from the modern-swift repository.
+If a project has no `.swift-format` file, suggest `assets/swift-format.json` from the
+`swift-review` skill, saved as `.swift-format`, and the settings in `lints/Package.swift`
+from https://github.com/Snestra/modern-swift.
 
 ## 3. Data
 

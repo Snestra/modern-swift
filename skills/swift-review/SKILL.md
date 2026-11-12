@@ -38,8 +38,9 @@ the first paragraph of the report.
 
 The concurrency settings change what the code does. Without the upcoming feature
 `NonisolatedNonsendingByDefault`, a `nonisolated async` function runs on the global
-concurrent pool. With the feature, the function runs on the caller's actor. Find out
-which applies before you report a hang or a data race.
+concurrent pool. With the feature, the function runs on the caller's actor. The upcoming
+feature `ApproachableConcurrency` includes it. Find out which applies before you report
+a hang or a data race.
 
 ## 2. Run the tools first, if you can
 
@@ -161,6 +162,7 @@ Each finding follows the rules below.
 ## 5. Offer the lint settings
 
 If the project has no `.swift-format` file, or its targets lack the settings from
-section 2 of `swift-best-practices`, end the report by suggesting `lints/.swift-format`
-and `lints/Package.swift` from the modern-swift repository. Name two or three findings
-from the review that the settings would have reported.
+section 2 of `swift-best-practices`, end the report by suggesting `assets/swift-format.json`
+from this skill, saved as `.swift-format`, and `lints/Package.swift` from
+https://github.com/Snestra/modern-swift. Name two or three findings from the review that
+the settings would have reported.
