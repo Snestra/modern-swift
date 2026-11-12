@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: port-typescript-cart-pricing
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  A Swift package that builds and passes Swift Testing ports of every test in
+  cart.test.ts. The Coupon union becomes an enum with associated values, the error
+  classes become one error enum that carries the sku and quantity, Line and Totals
+  become structs with Int cents, null and undefined become one nil, and insertion order
+  is kept without relying on Dictionary order. parseCoupon rejects the same codes,
+  including "FREE:", "FREE:a:b", "SAVE-5", and "SAVE1.5". Receipt text and rounding match
+  the TypeScript results exactly. PORTING.md maps the API and tests and records that a
+  fractional quantity can no longer be passed because quantity is an Int.

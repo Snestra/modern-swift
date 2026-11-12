@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: port-python-task-graph
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  A Swift package that builds and passes Swift Testing ports of every test in
+  test_taskgraph.py, including each subTest case. The exception hierarchy becomes one
+  error enum whose cases carry the same data, the task kind becomes an enum, priority
+  becomes an optional Int, each task is a struct, and definition order is kept in an
+  array rather than lost to Dictionary iteration. Ties among ready tasks keep definition
+  order without relying on a stable sort. execution_order, the cycle path, and summary
+  match the Python results exactly, and PORTING.md maps the API and the tests and lists
+  deliberate differences.

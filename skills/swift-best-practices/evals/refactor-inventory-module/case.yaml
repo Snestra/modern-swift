@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: refactor-inventory-module
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Inventory.swift is refactored into modern Swift that compiles in the Swift 6 language
+  mode and keeps the same operations. The item becomes a struct, the unchecked Sendable
+  conformance and the unsafe shared global are gone, no force unwrap or try! sits on a
+  path that file contents can reach, errors are an enum that carries the name or line
+  that failed, save reports its failure, the Bool parameter and the get prefix are
+  replaced, the report and the saved file have a deterministic order, and the reply
+  lists each change with its reason and calls out every changed signature.

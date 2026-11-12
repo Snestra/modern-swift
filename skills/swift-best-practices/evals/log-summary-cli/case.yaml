@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: log-summary-cli
+expected_outcome: |
+  A Package.swift and Sources/logsum/ for a practical internal command line tool. Bad
+  input never crashes it: a missing directory, an unreadable file, and a line that is not
+  JSON are each handled, failures name the file, and no force unwrap or try! sits on a
+  path that input can reach. Each line is decoded into a Codable struct, the directory
+  argument is a URL or FilePath, counting uses a dictionary, output is sorted by count
+  descending with a deterministic tie order, the skipped-line count is reported, and the
+  code stays simple application code with no protocol or generic that one type uses.

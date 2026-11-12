@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: photo-pipeline-concurrency
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  importPhotos becomes an async function whose slow work runs off the main actor through
+  a @concurrent function, with a bounded number of photos processed at once. The model
+  stays on the main actor and remains non-Sendable, each concurrent job uses its own
+  Scaler, thumbnails are appended in the original order, cancellation stops the import,
+  isImporting is reset on every path, and the package builds in the Swift 6 language
+  mode with no warnings, no @unchecked Sendable, no nonisolated(unsafe), no
+  Task.detached, and no DispatchQueue.

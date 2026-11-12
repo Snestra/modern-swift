@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: review-swiftui-feed
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  REVIEW.md is a prioritized review of a SwiftUI feed that does not modify the code. It
+  finds the concurrency faults (a continuation that never resumes when the request
+  fails, @unchecked Sendable on a view model whose @Published state is written from
+  another thread's closure, an actor that checks its cache and writes it after an await,
+  a stored closure that retains its owner) and the crashes on input (try! on decoded
+  data, a force unwrapped URL built from server text). It treats ObservableObject,
+  Task.detached, and onAppear with an unstructured Task as lower priority modernization.
+  It accepts normal SwiftUI conventions: views are structs with private @State, with no
+  @MainActor annotation, returning some View. Each finding cites file:line and a named
+  rule and shows its fix as code.

@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: review-inventory-module
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  REVIEW.md is a prioritized review of Inventory.swift that does not modify the code. It
+  finds the real problems (try! and force unwraps on file contents, @unchecked Sendable
+  with no lock next to a background save, an error type that carries only a message, a
+  write error discarded with try?, Dictionary order in the report and the saved file, a
+  Bool parameter, a get prefix, a class where a struct fits), ranks the crashes and the
+  data race above style issues, cites a file:line location and a named rule for each
+  finding, shows each fix as a short code change, groups repeated issues, and says what
+  the code already does well.
