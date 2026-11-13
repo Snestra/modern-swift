@@ -10,7 +10,7 @@ agent follows each skill.
 ## Install
 
 ```bash
-npx skills add Snestra/modern-swift -g -a universal claude-code -y
+npx skills add bjoernaagaard/modern-swift -g -a universal claude-code -y
 ```
 
 ## The skills
