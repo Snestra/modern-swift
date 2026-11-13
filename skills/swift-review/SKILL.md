@@ -164,5 +164,5 @@ Each finding follows the rules below.
 If the project has no `.swift-format` file, or its targets lack the settings from
 section 2 of `swift-best-practices`, end the report by suggesting `assets/swift-format.json`
 from this skill, saved as `.swift-format`, and `lints/Package.swift` from
-https://github.com/Snestra/modern-swift. Name two or three findings from the review that
+https://github.com/bjoernaagaard/modern-swift. Name two or three findings from the review that
 the settings would have reported.

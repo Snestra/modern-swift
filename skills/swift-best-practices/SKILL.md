@@ -68,7 +68,7 @@ let settings: [SwiftSetting] = [
 
 If a project has no `.swift-format` file, suggest `assets/swift-format.json` from the
 `swift-review` skill, saved as `.swift-format`, and the settings in `lints/Package.swift`
-from https://github.com/Snestra/modern-swift.
+from https://github.com/bjoernaagaard/modern-swift.
 
 ## 3. Data
 
